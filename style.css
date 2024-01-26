@@ -30,6 +30,9 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    background-position: center; /* 画像の中心を基準にする */
+    background-size: cover; /* 画像が常にコンテナを覆うようにする */
+    background-repeat: no-repeat; /* 画像が繰り返されないようにする */
     background-attachment: fixed;
 }
 
