@@ -1,8 +1,23 @@
 /* style.css */
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    color: white; /* テキストの色を白に設定 */
+    font-size: 40px;
+    text-align: left; /* テキストを右揃えに設定 */
+    margin-top: 60px; /* 上部の余白を設定 */
+    margin-left: 30px; /* 右側の余白を設定 */
+}
+
+p {
+    color: white; /* テキストの色を白に設定 */
+    font-size: 20px;
+    text-align: center;
 }
 
 
@@ -15,22 +30,91 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    background-attachment: fixed;
+}
+
+.message-container {
+    background-color:  transparent;
+    text-align: right;
+    font-size: 25px; 
+    color: white;
+    margin-top: 100px;
+    margin-right: 100px; 
+    margin-bottom: 300px;
+}
+
+@media screen and (max-width: 1000px) {
+    .message-container {
+        background-color:  transparent;
+        text-align: right;
+        font-size: 25px; 
+        color: white;
+        margin-top: 400px;
+        margin-right: 10px; 
+        margin-bottom: 100px;
+    }
+}
+
+
+
+/* .button-container {
+    background-color:  transparent;
+    padding: 20px;
+    margin: 20px 0;
+    width: 300px;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+} */
+
+.app-button {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+.app-button:hover {
+    border: 2px solid white; 
+    border-radius: 8px;
 }
 
 .container {
     background-color: transparent;
-    flex-grow: 1; 
+    flex: 1;
 
 }
-.white-container {
-    background-color:  rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    margin: 20px 0;
-    width: 300px;
-    margin-top: 100px;
+
+.notification-wrapper {
+    position: relative; /* 相対位置指定 */
+}
+
+.news-label {
+    position: absolute; /* 絶対位置指定 */
+    top: 0; /* 上端からの位置 */
+    left: 50px; /* 右端からの位置 */
+    background-color: black; /* 背景色 */
+    color: white; /* テキスト色 */
+    padding: 5px 10px; /* パディング */
+    border-radius: 0 0 0 10px; /* 角の丸み */
+}
+
+.notification-box {
+    background-color: rgba(0, 0, 0, 0.5); /* お知らせボックスの背景色 */
+    /* その他のスタイル */
+}
+
+
+.notification-box {
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景色 */
+    color: white; /* テキストの色 */
+    padding: 15px; /* 内側の余白 */
+    margin: 20px; /* 外側の余白 */
+    border-radius: 10px; /* 角の丸み */
+    width: 80%; /* ボックスの幅 */
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影の効果 */
 }
 
 
@@ -39,11 +123,11 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .footer-logo {
-    max-width: 100px; /* ロゴのサイズ調整 */
+    max-width: 120px; /* ロゴのサイズ調整 */
     margin-bottom: 10px;
 }
 
@@ -60,13 +144,3 @@ footer {
 
 
 
-.app-button {
-    transition: all 0.3s ease;
-    border: 3px solid transparent;
-    border-radius: 15px;
-}
-
-.app-button:hover {
-    border: 3px solid white; 
-    border-radius: 15px;
-}
