@@ -1,44 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iOSアプリ ダウンロードページ</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .half-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px; 
+            color: white;
+        }
+
+        .half-container p {
+            max-width: 90%;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .app-button-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 640px) {
+            .half-container p {
+                text-align: center; 
+            }
+        }
+
+    </style>
 </head>
+<body class="bg-center bg-cover bg-fixed bg-no-repeat" style="background-image: url('背景.png')">
+    <h1 class="text-3xl sm:text-5xl text-center text-white ml-8 mt-16">Sport Mentor AI</h1>
 
-<body>
-    <h1>Sport Mentor AI </h1>
+    <div class="container1 flex-1 h-40"></div>
 
-    <div class="message-container">
-    覇者へと導く<br>AIコーチ&emsp;<br>
-        <a href="YOUR_APP_STORE_LINK" target="_blank">
-            <img src="Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="app button" class="app-button">
-        </a>
+    <div class="message-container text-right text-white text-3xl sm:text-5xl mb-20">
+        <span>覇者へと導く<br>AIコーチ&emsp;<br></span>
     </div>
 
-    <div class="container">
+    <div class="explain-container text-center text-white text-md sm:text-lg mt-10 sm:mt-40">        <span>あなたに最適な練習メニューを考えます<br>AIコーチと練習を始めましょう</span>
     </div>
-
-    <div class="explain-container">
-        あなたに最適な練習メニューを考えます<br>AIコーチと練習を始めましょう
-    </div>
-
-    <div class="notification-wrapper">
-        <div class="news-label">NEWS</div>
-        <div class="notification-box">
+    
+    <div class="notification-wrapper relative">
+        <div class="notification-box relative bg-black bg-opacity-50 text-white py-4 px-6 mt-3 max-w-md mx-2 sm:mx-auto sm:max-w-xl rounded-lg">
+            <!-- スマホ用に左右にマージンを追加 -->
+            <div class="news-label absolute -top-6 left-0 bg-black text-white py-1 px-2 rounded-b-lg">NEWS</div>
             <p>ここにお知らせの内容を記入します。</p>
         </div>
     </div>
-
-    <div class="container">
+    
+    <div class="flex justify-center">
+        <div class="button-box bg-black bg-opacity-50 text-white mt-5 mx-2 sm:mx-5 max-w-md sm:max-w-lg rounded-lg shadow-md">
+            <!-- スマホ用に左右にマージンを追加 -->
+            <div class="half-container ml-3">
+                <img src="アプリアイコン.png" alt="画像の説明" class="w-16 h-16 sm:w-20 sm:h-20" style="border-radius: 10px;">
+                <p class="text-sm sm:text-lg">
+                    タイトル : Sport Mentor AI<br> 
+                    価格 : 無料（アイテム課金あり）<br>
+                    対応言語 : 英語、日本語<br>
+                    ※一部端末には対応しない場合があります。
+                </p>
+            </div>
+            <div class="app-button-box mt-5 justify-center items-center">
+                <a href="YOUR_APP_STORE_LINK" target="_blank" class="inline-block">
+                    <img src="Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="app button" class="app-button border-2 border-transparent rounded-lg hover:border-white">    
+                </a>
+            </div>
+        </div>
     </div>
+    
 
-    <footer>
-        <img src="会社ロゴ.PNG" alt="会社のロゴ" class="footer-logo">
+    <div class="container flex-1"></div>
+
+    <footer class="bg-black text-white text-center py-4 mt-10">
+        <img src="会社ロゴ.PNG" alt="会社のロゴ" class="footer-logo mx-auto mb-4" style="max-width: 120px;">
         <div class="footer-links">
             <a href="URL_TO_TERMS_OF_SERVICE">利用規約</a>
             <a href="URL_TO_PRIVACY_POLICY">プライバシーポリシー</a>
         </div>
     </footer>
 </body>
-
 </html>
